@@ -2857,7 +2857,7 @@ video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 500px;
+  height: 600px;
 }
 
 .parallax {
@@ -8180,4 +8180,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em;
   }
+}
+
+/*============ Added code ==========*/
+.card-height {
+  height: 500px;
 }
