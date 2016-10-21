@@ -35,6 +35,16 @@ footer.page-footer {
   margin: 0;
 }
 
+.parallax-container-short {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+
+.row {
+  opacity: 90%;
+}
+
 /*.section {
   height: 325px;
 }
