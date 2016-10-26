@@ -45,10 +45,34 @@ footer.page-footer {
   opacity: 90%;
 }
 
-/*.section {
-  height: 325px;
+.order-container {
+  column-break-inside: avoid;
 }
 
-.card {
-  height: 275px;
-}*/
+/* label color */
+ .input-field label {
+   color: brown;
+ }
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: brown;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid brown;
+   box-shadow: 0 1px 0 0 brown;
+ }
+ /* valid color */
+ .input-field input[type=text].valid {
+   border-bottom: 1px solid brown;
+   box-shadow: 0 1px 0 0 brown;
+ }
+ /* invalid color */
+ .input-field input[type=text].invalid {
+   border-bottom: 1px solid brown;
+   box-shadow: 0 1px 0 0 brown;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: brown;
+ }
