@@ -2,6 +2,18 @@
 $(document).ready(function(){
   $('.parallax').parallax();
 });
+
+var subtotal = document.getElementById("subtotal");
+// function updateSubtotal() {
+//   if (subtotal == "--") {
+//
+//   }
+// }
+
+var identifyButton = document.getElementsByClassName("order-button").addEventListener("click", function(){
+  console.log("You clicked on a button");
+});
+
 // BURGER ITEM LISTENER //
  var burgerOrder = document.getElementById("order-burger");
  burgerOrder.addEventListener("click", function(){
@@ -16,8 +28,8 @@ $(document).ready(function(){
  })
 
  // PIZZA ITEM LISTENER //
-  var burgerOrder = document.getElementById("order-pizza");
-  burgerOrder.addEventListener("click", function(){
+  var pizzaOrder = document.getElementById("order-pizza");
+  pizzaOrder.addEventListener("click", function(){
     var table = document.getElementById("order-input");
     var row = table.insertRow(0);
     var item = row.insertCell(0);
@@ -29,8 +41,8 @@ $(document).ready(function(){
   })
 
   // RIBS ITEM LISTENER //
-   var burgerOrder = document.getElementById("order-ribs");
-   burgerOrder.addEventListener("click", function(){
+   var ribsOrder = document.getElementById("order-ribs");
+   ribsOrder.addEventListener("click", function(){
      var table = document.getElementById("order-input");
      var row = table.insertRow(0);
      var item = row.insertCell(0);
@@ -42,8 +54,8 @@ $(document).ready(function(){
    })
 
    // DESSERT ITEM LISTENER //
-    var burgerOrder = document.getElementById("order-dessert");
-    burgerOrder.addEventListener("click", function(){
+    var dessertOrder = document.getElementById("order-dessert");
+    dessertOrder.addEventListener("click", function(){
       var table = document.getElementById("order-input");
       var row = table.insertRow(0);
       var item = row.insertCell(0);
@@ -53,3 +65,10 @@ $(document).ready(function(){
       item.innerHTML = itemText;
       price.innerHTML = itemPrice;
     })
+
+// SUBTOTAL //
+
+
+// TAX //
+
+// TOTAL //
