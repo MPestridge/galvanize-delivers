@@ -3,17 +3,6 @@ $(document).ready(function(){
   $('.parallax').parallax();
 });
 
-var subtotal = document.getElementById("subtotal");
-// function updateSubtotal() {
-//   if (subtotal == "--") {
-//
-//   }
-// }
-
-var identifyButton = document.getElementsByClassName("order-button").addEventListener("click", function(){
-  console.log("You clicked on a button");
-});
-
 // BURGER ITEM LISTENER //
  var burgerOrder = document.getElementById("order-burger");
  burgerOrder.addEventListener("click", function(){
@@ -25,6 +14,7 @@ var identifyButton = document.getElementsByClassName("order-button").addEventLis
    var itemPrice = document.getElementById("burger-price").innerHTML;
    item.innerHTML = itemText;
    price.innerHTML = itemPrice;
+   subtotalArr.push(Number(itemPrice.slice(1)));
  })
 
  // PIZZA ITEM LISTENER //
@@ -38,6 +28,7 @@ var identifyButton = document.getElementsByClassName("order-button").addEventLis
     var itemPrice = document.getElementById("pizza-price").innerHTML;
     item.innerHTML = itemText;
     price.innerHTML = itemPrice;
+    subtotalArr.push(Number(itemPrice.slice(1)));
   })
 
   // RIBS ITEM LISTENER //
@@ -51,6 +42,7 @@ var identifyButton = document.getElementsByClassName("order-button").addEventLis
      var itemPrice = document.getElementById("ribs-price").innerHTML;
      item.innerHTML = itemText;
      price.innerHTML = itemPrice;
+     subtotalArr.push(Number(itemPrice.slice(1)));
    })
 
    // DESSERT ITEM LISTENER //
@@ -64,11 +56,25 @@ var identifyButton = document.getElementsByClassName("order-button").addEventLis
       var itemPrice = document.getElementById("dessert-price").innerHTML;
       item.innerHTML = itemText;
       price.innerHTML = itemPrice;
+      subtotalArr.push(Number(itemPrice.slice(1)));
     })
 
 // SUBTOTAL //
+  var subtotalArr =[];
+function updateSubtotal(arr) {
+  var start=0;
+  for (var i; i<arr.length; i++) {
+    var newSubtotal = (start += arr[i]);
+  }
+}
+var subtotalNum = updateSubtotal(subtotalArr);
+var subtotalText = document.getElementById("subtotal");
+subtotalText.innerHTML = String(subtotalNum);
+console.log(subtotalNum)
 
 
+// updateSubtotal(subtotalArr);
+// console.log(updateSubtotal(subtotalArr));
 // TAX //
 
 // TOTAL //
